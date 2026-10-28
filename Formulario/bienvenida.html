@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bienvenida</title>
+</head>
+<body>
+    <main class="contenedor">
+        <section class="tarjeta bienvenida" aria-labelledby="titulo">
+            <p class="etiqueta">Registro completado</p>
+            <h1 id="titulo">¡Bienvenido/a, <span id="nombreBienvenida"></span>!</h1>
+            <p class="descripcion">
+                Tu registro se completó con el correo <strong id="emailBienvenida"></strong>.
+                Edad: <strong id="edadBienvenida"></strong>.
+            </p>
+            <button type="button" onclick="logout()">Cerrar sesión</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

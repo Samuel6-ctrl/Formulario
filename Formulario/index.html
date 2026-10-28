@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Crear cuenta</title>
+</head>
+<body>
+    <main class="contenedor">
+        <section class="tarjeta" aria-labelledby="titulo">
+            <p class="etiqueta">Crea tu cuenta</p>
+            <h1 id="titulo">¡Regístrate!</h1>
+            <p class="descripcion">Completa tus datos para continuar.</p>
+
+            <form onsubmit="guardarLocal(event)">
+                <label for="nombre">Nombre</label>
+                <input
+                    type="text"
+                    name="nombre"
+                    id="nombre"
+                    placeholder="Tu nombre"
+                    autocomplete="name"
+                    required
+                >
+
+                <label for="email">Correo electrónico</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="tu@correo.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="edad">Edad</label>
+                <input
+                    type="number"
+                    name="edad"
+                    id="edad"
+                    placeholder="Debes tener 18 años o más para ingresar"
+                    min="18"
+                    max="120"
+                    step="1"
+                    required
+                >
+
+                <label for="contrasenia">Contraseña</label>
+                <input
+                    type="password"
+                    name="contrasenia"
+                    id="contrasenia"
+                    placeholder="Al menos 8 caracteres"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+
+                <label for="confirmarContrasenia">Confirmar contraseña</label>
+                <input
+                    type="password"
+                    name="confirmarContrasenia"
+                    id="confirmarContrasenia"
+                    placeholder="Escribe de nuevo tu contraseña"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+
+                <button type="submit">Crear cuenta</button>
+            </form>
+            <p class="nota">Tus datos se guardan en este navegador. Las contraseñas no se almacenan.</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
